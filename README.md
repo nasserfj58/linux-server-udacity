@@ -117,7 +117,7 @@ sys.path.insert(0,"/var/www/NasserZon/venv")
 from myproject import app as application
 application.secret_key = 'Add your secret key'
 ```
-##### Get Flask App and add all required dirctories and files
+#### Get Flask App and add all required dirctories and files
 
 11. Install git ```sudo apt-get install git```
 14. Install python-pip ```sudo apt-get install python-pip```
@@ -164,9 +164,9 @@ http://3.122.74.245.xip.io
 
 ### References
 
-. https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-. https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-from-the-command-line
-. https://stackoverflow.com/questions/36020374/google-permission-denied-to-generate-login-hint-for-target-domain-not-on-localh
-. https://www.a2hosting.com/kb/developer-corner/postgresql/remote-postgresql-connections
-. https://stackoverflow.com/questions/23327293/flask-raises-templatenotfound-error-even-though-template-file-exists
-. https://developers.google.com/api-client-library/python/guide/aaa_oauth
+- https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+- https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-from-the-command-line
+- https://stackoverflow.com/questions/36020374/google-permission-denied-to-generate-login-hint-for-target-domain-not-on-localh
+- https://www.a2hosting.com/kb/developer-corner/postgresql/remote-postgresql-connections
+- https://stackoverflow.com/questions/23327293/flask-raises-templatenotfound-error-even-though-template-file-exists
+- https://developers.google.com/api-client-library/python/guide/aaa_oauth
