@@ -7,9 +7,9 @@ To make your server packages up to date you need to :
 
 1.login to instail instanse via ssh (you must to download public key file from amazon instail  and psate the file in any folder you like and name it publickey.pem)
 
-2. Run sudo apt-get update
+2. Run ```sudo apt-get update```
 
-3. Run sudo apt-get upgrade
+3. Run ```sudo apt-get upgrade```
 
 ##### I change the IP to static via AWS lightstail so the IP will not be change.
 
@@ -130,7 +130,7 @@ sudo pip install virtualenv
 ``` 
 source venv/bin/activate 
 ```
-12. install all needed dependnsises 
+12. Install all needed dependnsises 
 ```
 sudo pip install sqlalchemy
 sudo pip install bcrypt
@@ -142,14 +142,19 @@ sudo pip install oauth2client
 sudo pip install sqlalchemy
 ```
 13. Clone Nasserzon project fom https://github.com/nasserfj58/NasserZon.git
+
 14. Remove all unwated files. ```sudo rm filename ```
-15. Move all python files to venv dirctory by typing ```sudo mv *.py venv``
+
+15. Move all python files to venv dirctory by typing ```
+sudo mv *.py venv``
+
 16. Configre db on all python files by changing database engine from sqllite to postgrasesql db by change ``` sqlite:///nasserzon.db?check_same_thread=false ``` to ``` postgresql+psycopg2://catalog:catalog@localhost:5432/nasserzon ```
-17. Update google api autoirzed domains and redirct.
+
+17. Update google api autoirzed domains and redirct and download client_scretes key as json.
 
 18. Add client_secrets.json ``` sudo touch client_secrets.json ``` file and paste your google api clinet secret.
 
-18. Change CLIENT_ID in ```venv/myproject.py ``` to ``` json.loads(open(r'/var/www/NasserZon/venv/client_secrets.json, 'r').read())[
+19. Change CLIENT_ID in ```venv/myproject.py ``` to ``` json.loads(open(r'/var/www/NasserZon/venv/client_secrets.json, 'r').read())[
     'web']['client_id'] ``` 
 19. Run and seed the database by running ``` sudo python storedb_setup.py``` and ``` sudo python fillDbData.py```
 20. enable NasserZon Application by typing `` sudo a2ensite NasserZon` ```
@@ -157,3 +162,11 @@ sudo pip install sqlalchemy
 You can find the application in 
 http://3.122.74.245.xip.io
 
+### References
+
+. https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+. https://www.a2hosting.com/kb/developer-corner/postgresql/connect-to-postgresql-from-the-command-line
+. https://stackoverflow.com/questions/36020374/google-permission-denied-to-generate-login-hint-for-target-domain-not-on-localh
+. https://www.a2hosting.com/kb/developer-corner/postgresql/remote-postgresql-connections
+. https://stackoverflow.com/questions/23327293/flask-raises-templatenotfound-error-even-though-template-file-exists
+. https://developers.google.com/api-client-library/python/guide/aaa_oauth
