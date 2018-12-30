@@ -159,7 +159,8 @@ sudo mv *.py venv ```
 19. Change CLIENT_ID in ```venv/myproject.py ``` to ``` json.loads(open(r'/var/www/NasserZon/venv/client_secrets.json, 'r').read())[
     'web']['client_id'] ``` 
 19. Run and seed the database by running ``` sudo python storedb_setup.py``` and ``` sudo python fillDbData.py```
-20. enable NasserZon Application by typing `` sudo a2ensite NasserZon` ```
+20. enable NasserZon Application by typing ``` sudo a2ensite NasserZon ```
+21. Restart appace ``` sudo service apache2 restart ```
 
 You can find the application in 
 http://3.122.74.245.xip.io
