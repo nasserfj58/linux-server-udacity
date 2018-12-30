@@ -5,7 +5,7 @@ Before Jumping to installition guide you must create AWS account and create ligh
 
 To make your server packages up to date you need to :
 
-1.login to instail instanse via ssh (you must to download public key file from amazon instail  and psate the file in any folder you like and name it publickey.pem)
+1. login to instail instanse via ssh (you must to download public key file from amazon instail  and psate the file in any folder you like and name it publickey.pem)
 
 2. Run ```sudo apt-get update```
 
@@ -19,7 +19,7 @@ To make your server packages up to date you need to :
 
 1. login to instail instanse via ssh (you must to download public key file from amazon instail  and psate the file in any folder you like and name it publickey.pem)
 
-2. cd to the file path and login by termenail by typing ssh -i publickey.pem ubuntu@serverIp -p 22
+2. cd to the file path and login by termenail by typing ```ssh -i publickey.pem ubuntu@serverIp -p 22`
 
 3. Type ```sudo nano /etc/.ssh/sshd_config```
 
@@ -66,11 +66,12 @@ for me it was ssh ```-i ~/.ssh/grader.key grader@3.122.74.245 -p 2200```
 
 
 ## Configure Postgres db
+
 1. Install PostgreSQL db by writing ```sudo apt-get install postgresql```
 
 2. Type ```sudo -u postgres psql``` to login to postgrasesql 
 
-3.  create new database  by typing ```create database nasserzon;```
+3.  Create new database  by typing ```create database nasserzon;```
 
 4. Create new user ```create user catalog with password 'catalog';```
 
@@ -106,8 +107,8 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 5. Restart appace ``` sudo service apache2 restart ```
-6. Create new dirctory ''' sudo mkdir /var/www/NasserZon '''
-7. Move to the new drictory ``` cd /var/www/NasserZon ``` and create NasserZon.wsgi ```sudo nano NasserZon.wsgi ``` and past 
+6. Create new dirctory ``` sudo mkdir /var/www/NasserZon ```
+7. Move to the new drictory ``` cd /var/www/NasserZon ``` and create NasserZon.wsgi ```sudo nano NasserZon.wsgi ``` and paste 
 ```
 #!/usr/bin/python
 import sys
@@ -116,12 +117,13 @@ logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/NasserZon/venv")
 from myproject import app as application
 application.secret_key = 'Add your secret key'
+
 ```
 #### Get Flask App and add all required dirctories and files
 
 11. Install git ```sudo apt-get install git```
 14. Install python-pip ```sudo apt-get install python-pip```
-15. Install virtual enviroment which will hold all NasserZon dependinces 
+15. Install virtual enviroment which will hold all NasserZon dependinces and make it acssesble only in this folder.
 ``` 
 sudo pip install virtualenv 
 ````
@@ -146,7 +148,7 @@ sudo pip install sqlalchemy
 14. Remove all unwated files. ```sudo rm filename ```
 
 15. Move all python files to venv dirctory by typing ```
-sudo mv *.py venv``
+sudo mv *.py venv ```
 
 16. Configre db on all python files by changing database engine from sqllite to postgrasesql db by change ``` sqlite:///nasserzon.db?check_same_thread=false ``` to ``` postgresql+psycopg2://catalog:catalog@localhost:5432/nasserzon ```
 
