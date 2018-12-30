@@ -25,11 +25,11 @@ To make your server packages up to date you need to :
 
 4. Change ssh port from 22 to 2200 and restart ssh by typing ```sudo service ssh restart```
 
-5. Allowing port 2200 for ssh on firewall by  typing sudo ufw allow 2200/tcp
+5. Allowing port 2200 for ssh on firewall by  typing ```sudo ufw allow 2200/tcp```
 
-6. Allowing port 80 for http on firewall by  typing sudo ufw allow www
+6. Allowing port 80 for http on firewall by  typing ```sudo ufw allow www```
 
-7. Allowing port 123 for NTP on firewall by  typing sudo ufw allow 123/udp
+7. Allowing port 123 for NTP on firewall by  typing ```sudo ufw allow 123/udp```
 
 8. Enable firewall by typing sudo ufw enable 
 
