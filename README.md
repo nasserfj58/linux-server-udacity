@@ -7,9 +7,9 @@ To make your server packages up to date you need to :
 
 1. login to instail instanse via ssh (you must to download public key file from amazon instail  and psate the file in any folder you like and name it publickey.pem)
 
-2. Run ```sudo apt-get update```
+2. Type ```sudo apt-get update``` on your terminal.
 
-3. Run ```sudo apt-get upgrade```
+3. Type  ```sudo apt-get upgrade``` on your terminal.
 
 ##### I change the IP to static via AWS lightstail so the IP will not be change.
 
