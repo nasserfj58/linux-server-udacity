@@ -173,3 +173,4 @@ http://3.122.74.245.xip.io
 - https://www.a2hosting.com/kb/developer-corner/postgresql/remote-postgresql-connections
 - https://stackoverflow.com/questions/23327293/flask-raises-templatenotfound-error-even-though-template-file-exists
 - https://developers.google.com/api-client-library/python/guide/aaa_oauth
+- https://stackoverflow.com/questions/41429988/inside-virtual-env-sudo-pip-links-to-the-global-python-pip
